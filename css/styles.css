@@ -51,13 +51,13 @@ h1 a, .top-nav a {
 .top-nav a {
     text-transform: uppercase;
   }
-.container, .intro, .contact {
+.container, .contact {
     max-width: 1100px;
     padding: 10px;
     margin: 0 auto;
     font-family: 'Karla', sans-serif;
 }
-.col, .contact, .intro {
+.col, .contact {
     margin: 10px;
     min-height: 250px;
     color: black;
@@ -84,7 +84,6 @@ h1 a, .top-nav a {
     display: none;
   }
   img {
-    display: auto;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -92,7 +91,15 @@ h1 a, .top-nav a {
   p {
     padding: 10px;
   }
-
+  .intro {
+    display: flex;
+    font-family: 'Karla', sans-serif;
+    flex-direction: column;
+  }
+  .title {
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+  }
 /* Media Queries */
 @media (min-width: 768px) {
     .top-nav {
@@ -128,8 +135,10 @@ h1 a, .top-nav a {
         margin-left: 20px;
       }
       .intro {
-        display: flex;
-        
+        flex-direction: row-reverse; 
+      }
+      .top {
+        display: none;
       }
   }
   @media (min-width: 1024px) {
